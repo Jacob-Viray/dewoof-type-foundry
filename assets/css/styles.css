@@ -1,0 +1,1359 @@
+@charset "UTF-8";
+@import url(http://allfont.net/allfont.css?fonts=colonna-mt);
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_normal_200.woff);
+font-weight: 200;
+}
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_normal_400.woff);
+}
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_normal_700.woff);
+font-weight: 700;
+}
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_italic_200.woff);
+font-style: italic;
+font-weight: 200;
+}
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_italic_400.woff);
+font-style: italic;
+}
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_italic_700.woff);
+font-style: italic;
+font-weight: 700;
+}
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_oblique_200.woff);
+font-style: oblique;
+font-weight: 200;
+}
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_oblique_400.woff);
+font-style: oblique;
+}
+@font-face {
+font-family: Dogtype;
+src: url(../fonts/dogtype_oblique_700.woff);
+font-style: oblique;
+font-weight: 700;
+}
+
+@font-face {
+font-family: Wolftype;
+src: url(../fonts/wolftype_normal_200.otf);
+font-weight: 200;
+}
+@font-face {
+font-family: Wolftype;
+src: url(../fonts/wolftype_normal_400.otf);
+}
+@font-face {
+font-family: Wolftype;
+src: url(../fonts/wolftype_normal_700.otf);
+font-weight: 700;
+}
+
+@font-face {
+font-family: Anttype;
+src: url(../fonts/anttype_normal_200.otf);
+font-weight: 200;
+}
+@font-face {
+font-family: Anttype;
+src: url(../fonts/anttype_normal_400.otf);
+}
+@font-face {
+font-family: Anttype;
+src: url(../fonts/anttype_normal_700.otf);
+font-weight: 700;
+}
+
+@font-face {
+font-family: Cattype;
+src: url(../fonts/cattype_normal_200.woff);
+font-weight: 200;
+}
+@font-face {
+font-family: Cattype;
+src: url(../fonts/cattype_normal_400.woff);
+}
+@font-face {
+font-family: Cattype;
+src: url(../fonts/cattype_normal_700.woff);
+font-weight: 700;
+}
+
+@font-face {
+font-family: Cattype;
+src: url(../fonts/cattype_oblique_200.woff);
+font-style: oblique;
+font-weight: 200;
+}
+@font-face {
+font-family: Cattype;
+src: url(../fonts/cattype_oblique_400.woff);
+font-style: oblique;
+}
+@font-face {
+font-family: Cattype;
+src: url(../fonts/cattype_oblique_700.woff);
+font-style: oblique;
+font-weight: 700;
+}
+
+
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Century Gothic', Gotham, Helvetica, Arial, sans-serif;
+max-width: 2140px;
+margin: 0 auto;
+}
+main {
+width: 100%;
+height: 100%;
+position: relative;
+top: 100px;
+}
+.flex-center-horiz, .flex-center-vert {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.flex-center-vert {
+flex-direction: column;
+}
+
+
+
+
+/* HEADER content */
+nav {
+position: relative; /* nav centering on ff when zoomed out */
+color: #444;
+z-index: 3;
+padding-top: 20px;
+}
+nav, nav:before, nav:after {
+width: 100%;
+max-width: 2140px;
+height: 50px;
+background: white;
+backface-visibility: hidden; /* appears to smoothen edge a bit for some */
+}
+nav:before, nav:after {
+position: absolute;
+left: 0;
+border-bottom: 1px solid dimgray;
+box-shadow: 0px 2px 2px 0px hsla(0,0%,0%,0.50);
+}
+nav:before {
+content: "";
+z-index: -1;
+height: 250px;
+top: -200px;
+transform-origin: left bottom;
+transform: skewY(3.5deg);
+}
+nav:after {
+text-shadow: 0 0 1px rgba(0,0,0,0.1);
+height: 100px;
+top: -50px;
+transform-origin: right bottom;
+transform: skewY(-2.5deg);
+}
+nav a {
+text-decoration: none;
+color: inherit;
+padding: 0 20px;
+}
+nav a:hover, nav a:focus {
+opacity: 0.65;
+color: black;
+}
+nav :nth-child(1) {
+display: none;
+}
+nav :nth-child(2) {
+font-family: 'Colonna MT', 'Century Gothic', Arial, sans-serif;
+font-size: 2.75rem;
+}
+/* end HEADER content */
+
+
+
+
+
+/* BACKGROUND type */
+nav:after {
+content: "Friends and fellow citizens: I stand before you tonight under indictment for the alleged crime of having voted at the last presidential election, without having a lawful right to vote. It shall be my work this evening to prove to you that in thus voting, I not only committed no crime, but, instead, simply exercised my citizen's rights, guaranteed to me and all United States citizens by the National Constitution, beyond the power of any state to deny. The preamble of the Federal Constitution says... We, the people of the United States, in order to form a more perfect union, establish justice, insure domestic tranquillity, provide for the common defense, promote the general welfare, and secure the blessings of liberty to ourselves and our posterity, do ordain and establish this Constitution for the United States of America.  It was we, the people; not we, the white male citizens; nor yet we, the male citizens; but we, the whole people, who formed the Union. And we formed it, not to give the blessings of liberty, but to secure them; not to the half of ourselves and the half of our posterity, but to the whole people - women as well as men. And it is a downright mockery to talk to women of their enjoyment of the blessings of liberty while they are denied the use of the only means of securing them provided by this democratic-republican government - the ballot. For any state to make sex a qualification that must ever result in the disfranchisement of one entire half of the people, is to pass a bill of attainder, or, an ex post facto law, and is therefore a violation of the supreme law of the land. By it the blessings of liberty are forever withheld from women and their female posterity. To them this government has no just powers derived from the consent of the governed. To them this government is not a democracy. It is not a republic. It is an odious aristocracy; a hateful oligarchy of sex; the most hateful aristocracy ever established on the face of the globe; an oligarchy of wealth, where the rich govern the poor. An oligarchy of learning, where the educated govern the ignorant, or even an oligarchy of race, where the Saxon rules the African, might be endured; but this oligarchy of sex, which makes father, brothers, husband, sons, the oligarchs over the mother and sisters, the wife and daughters, of every household - which ordains all men sovereigns, all women subjects, carries dissension, discord, and rebellion into every home of the nation. Webster, Worcester, and Bouvier all define a citizen to be a person in the United States, entitled to vote and hold office. The only question left to be settled now is: Are women persons? And I hardly believe any of our opponents will have the hardihood to say they are not. Being persons, then, women are citizens; and no state has a right to make any law, or to enforce any old law, that shall abridge their privileges or immunities. Hence, every discrimination against women in the constitutions and laws of the several states is today null and void, precisely as is every one against Negroes. -Susan B. Anthony, 1873.";
+opacity: 0.8;
+font-size: 0.65rem;
+color: gray;
+position: absolute;
+z-index: -2;
+overflow: hidden;
+}
+/* end BACKGROUND type */
+
+
+
+
+
+/* HOME PAGE */
+#index-main {
+height: 100vh;
+}
+#index-main p {
+padding-top: 20px;
+text-align: center;
+}
+#index-main p:not(:first-of-type), #index-main a {
+opacity: 0;
+animation-name: woofBottom;
+animation-delay: 0.5s;
+animation-fill-mode: forwards;
+}
+#index-main p:last-of-type {
+font-style: italic;
+}
+#index-main a {
+/* show on mobile, acts as immediately noticeable entry portal link  */
+display: none; 
+padding: 20px 0;
+max-width: 280px;
+text-align: center;
+margin: 0 auto;
+font-weight: bold;
+color: #444;
+}
+#index-main a:hover {
+opacity: 0.65;
+}
+
+/* WOOF letters */
+#woof-holder {
+margin: 0 auto;
+width: 500px;
+align-items: flex-start;
+flex-wrap: wrap;
+}
+#woof-1, #woof-2, #woof-3, #woof-4, 
+#woof-1:before, #woof-1:after, #woof-4:after, 
+#index-main p, #index-main a {
+transition: all 0.5s;
+animation-iteration-count: 1;
+animation-timing-function: cubic-bezier(.7,.26,.44,.82);
+animation-duration: 4s;
+}
+#woof-1, #woof-2, #woof-3, #woof-4 {
+position: relative;
+}
+#woof-1:before, #woof-1:after, #woof-4:after {
+position: absolute;
+top: 0;
+content: "";
+}
+#woof-1 {
+width: 200px;
+}
+#woof-1:before, #woof-1:after {
+border-left: 30px solid dimgray;
+border-right: 30px solid dimgray;
+width: 82px;
+height: 250px;
+}
+#woof-1:before {
+transform: skewX(10deg);
+left: 0;
+animation-name: woofLeft;
+}
+#woof-1:after {
+transform: skewX(-10deg);
+right: 0;
+}
+#woof-2, #woof-3 {
+border-radius: 50%;
+}
+#woof-2 {
+animation-name: woofTop;
+width: 250px;
+height: 250px;
+border: 30px solid gray;
+}
+#woof-3 {
+animation-name: woofBottom;
+width: 180px;
+height: 180px;
+border: 50px solid dimgray;
+}
+#woof-4 {
+width: 170px;
+height: 250px;
+border-top: 30px solid #444;
+border-left: 30px solid #444;
+}
+#woof-4:after {
+top: 60px;
+border-top: 30px solid #444;
+width: 140px;
+animation-name: woofRight;
+}
+#woof-1:hover:after, #woof-2:hover, #woof-3:hover, #woof-4:hover {
+border-color: silver;
+}
+#woof-1:hover + #woof-2 {
+border: 100px solid lightgray;
+}
+#woof-2:hover + #woof-3 {
+width: 250px;
+height: 250px;
+}
+#woof-3:hover + #woof-4 {
+height: 350px;
+border-left-color: black;
+border-bottom-left-radius: 30%;
+}
+#woof-4:hover {
+width: 250px;
+height: 200px;
+}
+/* end WOOF letters */
+
+/* WOOF letters animations */
+@keyframes woofLeft {
+0% {
+transform: skewX(0deg);
+border-color: lightgray;
+opacity: 0;
+}
+50% {
+opacity: 1;
+}
+100% {
+transform: skewX(10deg);
+border-color: dimgray;
+}	
+}
+@keyframes woofRight {
+0% {
+opacity: 0;
+border-color: silver;
+transform: translateX(5px);
+}
+50% {
+opacity: 1;
+transform: translateX(0);
+}
+100% {
+border-color: #444;
+}
+}
+@keyframes woofTop {
+0% {
+opacity: 0;
+border-color: #444;
+transform: translateY(-5px);
+}
+50% {
+transform: translateY(0);
+}
+100% {
+opacity: 1;
+border-color: gray;
+}
+}
+@keyframes woofBottom {
+0% {
+opacity: 0;
+border-color: lightgray;
+transform: translateY(25px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+border-color: dimgray;
+}
+}
+/* end WOOF letters animations */
+
+/* smiley action */
+hr {
+margin: 0 auto;
+width: 15%;
+height: 30px;
+border-style: solid;
+border-color: #444;
+border-width: 0 0 15px 0;
+border-radius: 50%;
+transition: all 1s;
+}
+hr:hover {
+width: 20%;
+height: 80px;
+border-color: gray;
+}
+hr + p {
+opacity: 0;
+font-weight: bold;
+}
+hr:hover + p {
+opacity: 1;
+}
+/* end smiley action */
+/* end HOME PAGE */
+
+
+
+
+
+/* LIBRARY PAGE  */
+#font-gallery {
+width: 100%;
+}
+#gallery-controls {
+padding: 40px 10px 20px 40px;
+}
+#gallery-controls label {
+color: #444;
+display: inline-block;
+text-align: center;
+padding: 10px 20px;
+}
+#gallery-controls select {
+font-family: 'Century Gothic', Arial, sans-serif;
+font-size: 1rem;
+font-weight: bold;
+background: transparent;
+border: none;
+border-right: 3px double dimgray;
+border-radius: 15%;
+padding-right: 5px;
+-moz-appearance: none; /* arrow */
+}
+#gallery-controls select:hover,
+#gallery-controls select:focus,
+#font-gallery > div > div label:hover,
+#font-gallery > div > div label:focus,
+#font-gallery ul li:nth-child(1) button:hover,
+#font-gallery ul li:nth-child(1) button:focus,
+#submit:hover, #submit:focus,
+#contact-main div:nth-child(1) a:hover, 
+#contact-main div:nth-child(1) a:focus {
+opacity: 0.5;
+cursor: pointer;
+}
+#font-gallery > div { /* font display containers */
+padding: 20px;
+display: block;
+margin-bottom: 50px;
+border-top: 2px solid silver;
+border-bottom: 2px solid gray;
+box-shadow: 0px 8px 8px 0px hsla(0,0%,0%,0.35);
+}
+#font-gallery > div h3 {
+display: inline-block;
+color: #444;
+padding: 0 0 20px 20px;
+}
+#font-gallery > div p, #font-gallery ul li:nth-child(1) button {
+font-size: 2.4rem;
+}
+
+/* styles popup function */
+#font-gallery > div > div label {
+font-size: 0.925rem;
+color: #444;
+}
+#font-gallery > div > div { /* styles popup container */
+display: inline;
+width: 200px;
+}
+#font-gallery > div input[type=checkbox] {
+display: none;
+}
+#font-gallery > div > div ul, #font-gallery > div input[type=checkbox]:checked + ul {
+border: 5px solid white;
+position: absolute;
+left: 0;
+display: flex;
+align-items: center;
+align-content: space-between;
+flex-direction: column;
+background: lightgray;
+font-size: 2rem;
+list-style-type: none;
+}
+#font-gallery > div > div ul { /* STP STYLES POPUP LIST MARKER here */
+width: 0;
+height: 0;
+color: transparent;
+transition: color 0.25s, width 0.25s 0.25s, height 0.1s 1s;
+overflow: hidden;
+}
+#font-gallery > div input[type=checkbox]:checked + ul {
+width: 100%;
+height: auto;
+color: black;
+transition: width 0.25s, color 0.5s 0.25s;
+overflow-y: auto;
+}
+#font-gallery ul li {
+min-width: 500px;
+padding: 10px;
+}
+#font-gallery ul li:nth-child(1) button { 
+/* acts mainly as a recognizable visual prompt, can actually click anywhere on ul to close */
+float: right;
+background: none;
+border: none;
+}
+#font-gallery ul li:nth-child(2) {
+border-bottom: 5px solid white;
+}
+#font-gallery ul li span {
+float: right;
+font-family: 'Century Gothic', Gotham, sans-serif;
+font-style: normal;
+}
+#font-gallery > div label span, 
+#font-gallery ul li span, 
+#font-gallery ul li:nth-child(1), 
+#font-gallery ul li:nth-child(2) {
+font-weight: bold;
+}
+#font-gallery ul li:nth-child(3), 
+#font-gallery ul li:nth-child(6), 
+#font-gallery ul li:nth-child(9) {
+font-weight: 200;
+}
+#font-gallery ul li:nth-child(4), 
+#font-gallery ul li:nth-child(7), 
+#font-gallery ul li:nth-child(10) {
+font-weight: 400;
+}
+#font-gallery ul li:nth-child(5), 
+#font-gallery ul li:nth-child(8), 
+#font-gallery ul li:nth-child(11) {
+font-weight: 700;
+}
+#font-gallery ul li:nth-child(6), 
+#font-gallery ul li:nth-child(7), 
+#font-gallery ul li:nth-child(8) {
+font-style: oblique;
+}
+#font-gallery ul li:nth-child(9), 
+#font-gallery ul li:nth-child(10), 
+#font-gallery ul li:nth-child(11) {
+font-style: italic;
+}
+/* styles popup function */
+
+/* fonts listed by age, newest (highest age number) first */
+#font-C2alphabet-4age p, #styles-popup-C2 + ul {
+font-family: Cattype, 'Century Gothic', monospace;
+}
+#font-A1alphabet-3age p, #styles-popup-A1 + ul {
+font-family: Anttype, 'Century Gothic', fantasy;
+}
+#font-W4alphabet-2age p, #styles-popup-W4 + ul {
+font-family: Wolftype, 'Century Gothic', sans-serif;
+}
+#font-D3alphabet-1age p, #styles-popup-D3 + ul {
+font-family: Dogtype, 'Century Gothic', sans-serif;
+}
+/* end fonts listed by age, newest (highest age number) first */
+/* end LIBRARY PAGE  */
+
+
+
+
+
+/* FONT TESTER PAGE  */
+#text-box-holder, #font-controls {
+width: 100%;
+height: 300px;
+}
+#font-controls {
+padding-top: 30px;
+max-width: 1000px;
+flex-direction: row;
+align-items: flex-start;
+}
+#text-box {
+background-color: transparent;
+width: 100%;
+height: 100%;
+text-align: center;
+font-size: 3rem;
+border: none;
+}
+#text-box:focus {
+outline: none;
+}
+#font-controls > div div button, #font-color-custom, #font-size-custom, #background-color-custom {
+font-size: 0.6rem;
+width: 40px;
+height: 40px;
+margin: 5px;
+text-align: center;
+cursor: pointer;
+border: 3px solid lightgray;
+}
+#font-controls > div div button:hover, 
+#font-color-custom:hover, 
+#font-size-custom:hover, 
+#background-color-custom:hover, 
+#font-controls > div div button:focus, 
+#font-color-custom:focus, 
+#font-size-custom:focus, 
+#background-color-custom:focus {
+border: 3px solid silver;
+}
+
+/* collapsible lists function */
+#font-controls > div {
+width: 30%;
+height: 200px;
+display: flex;
+flex-direction: column;
+}
+#font-controls > div div {
+padding: 0 30px;
+display: none;
+}
+#font-controls > div label {
+margin: 0 auto;
+color: #444;
+cursor: pointer;
+}
+#font-controls > div label:hover, #font-controls > div label:focus {
+color: black;
+}
+#font-controls > div input[type=checkbox]{
+display: none;
+}
+#font-controls > div input[type=checkbox]:checked + div{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+/* end collapsible lists function */
+
+/* font style list */
+#font-italic {
+font-style: italic;
+}
+#font-oblique {
+font-style: oblique;
+}
+/* end font style list */
+
+/* font colors list */
+#font-black {
+background: #000;
+}
+#font-white {
+background: #fff;
+}
+#font-red {
+background: saddlebrown;
+}
+#font-blue {
+background: rebeccapurple;
+}
+#font-green {
+background: seagreen;
+}
+/* end font colors list */
+
+/* background colors list */
+#background-black {
+background: #000;
+}
+#background-white {
+background: #fff;
+}
+#background-red {
+background: lightcoral;
+}
+#background-blue {
+background: lightblue;
+}
+#background-green {
+background: lightgreen;
+}
+/* end background colors list */
+/* end FONT TESTER PAGE  */
+
+
+
+
+
+/* DESIGNERS PAGE */
+#designer-main {
+height: 100%;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+}
+#designer-main article {
+margin: 20px;
+display: inline-block;
+min-width: 200px;
+max-width: 25%;
+height: auto;
+}
+#designer-main article h3 {
+color: #444;
+margin: 0 auto;
+max-width: 200px;
+text-align: center;
+padding-bottom: 10px;
+}
+#designer-main article h3 span, #designer-main article img, #designer-main article p {
+display: block;
+}
+#designer-main article h3 span {
+font-weight: 400;
+font-style: italic;
+}
+#designer-main article img, #designer-main article input {
+width: 200px;
+height: 200px;
+}
+#designer-main article img {
+margin: 0 auto;
+border: 5px solid dimgray;
+border-radius: 50%;
+}
+#designer-main article p {
+line-height: 1.4rem;
+margin: 0 auto;
+max-width: 90%;
+height: 160px;
+padding-top: 10px;
+}
+#designer-main article input {
+z-index: 2;
+display: none;
+}
+/* end DESIGNERS PAGE */
+
+
+
+
+
+/* COMPANY PAGE */
+#company-main {
+margin: 0 auto;
+max-width: 1260px;
+max-height: 1260px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: flex-start;
+}
+#company-main h1, #company-main h2 {
+display: inline-block;
+margin-bottom: 15px;
+border-bottom: 5px solid silver;
+border-left: 5px solid transparent;
+}
+#company-main h1 {
+font-size: 3rem;
+}
+#company-main h2 {
+font-size: 2rem;
+}
+#company-main h3 {
+padding-top: 30px;
+}
+#company-main h3 span {
+display: block;
+}
+#company-main h1, #company-main h2, #company-main h3, #company-main p {
+padding-bottom: 15px;
+}
+#company-main p {
+line-height: 1.6rem;
+}
+#company-main article {
+padding: 20px 10px;
+min-width: 300px;
+max-width: 400px;
+border-right: 0.5px solid silver;
+}
+#company-main article figure {
+float: right;
+width: 150px;
+height: 150px;
+margin: 0 0 60px 10px;
+}
+#company-main article figure img {
+width: 100%;
+height: 100%;
+border: 5px solid silver;
+border-radius: 50%;
+}
+#company-main article figure figcaption {
+font-size: 0.8rem;
+font-weight: 200;
+}
+/* end COMPANY PAGE */
+
+
+
+
+
+/* CONTACT PAGE */
+#contact-main {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: baseline;
+flex-wrap: wrap;
+}
+#contact-main div:nth-child(1) p {
+margin: 20px 0;
+}
+#contact-main div:nth-child(1) a {
+color: #444;
+font-weight: bold;
+}
+#contact-main div:nth-child(2) {
+max-width: 600px;
+width: 100%;
+}
+form {
+display: flex;
+flex-direction: row;
+margin-bottom: 20px;
+}
+form, form fieldset {
+width: 100%;
+height: 100%;
+border: none;
+}
+form fieldset label, form fieldset input, form fieldset textarea {
+font-family: 'Century Gothic', Gotham, sans-serif;
+display: block;
+margin: 0 auto;
+width: 80%;
+padding: 10px;
+}
+form fieldset textarea {
+height: 200px;
+}
+#submit {
+float: right;
+margin-top: 20px;
+margin-right: 10%;
+background: none;
+border: none;
+font-size: 1.2rem;
+}
+#map {
+border-top: 5px solid silver;
+width: 100%;
+height: 500px;
+max-height: 50vh;
+}
+/* end CONTACT PAGE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1330px) {
+/* DESIGNERS PAGE */
+#designer-main article p {
+height: 240px;
+}
+/* end DESIGNERS PAGE */
+}
+
+
+
+
+
+@media all and (max-width: 1260px) {
+/* COMPANY PAGE */
+#company-main {
+max-width: 840px;
+max-height: 1800px;
+}
+/* end COMPANY PAGE */
+}
+
+
+
+
+
+@media all and (max-width: 950px) {
+/* LIBRARY page  */
+#gallery-controls {
+width: 500px;
+}
+/* end LIBRARY page  */
+}
+
+
+
+
+
+@media all and (max-width: 900px) {
+/* DESIGNERS PAGE */
+#designer-main article {
+max-width: 200px;
+}
+#designer-main article img {
+transition: opacity 1s;
+}
+#designer-main article img:hover, #designer-main article img:focus  {
+opacity: 0.65;
+cursor: pointer;
+}
+#designer-main article p {
+max-width: 100%;
+padding-top: 20px;
+opacity: 0;
+height: 0;
+border-bottom: 1px solid lightgray;
+transition: opacity 0.35s, height 0.35s 0.35s;
+}
+#designer-main input[type=radio]:checked + p {
+height: 280px;
+opacity: 1;
+transition: height 0.35s, opacity 0.35s 0.35s;
+}
+/* end DESIGNERS PAGE */
+
+/* CONTACT PAGE */
+form {
+flex-wrap: wrap;
+}
+/* end CONTACT PAGE */
+}
+
+
+
+
+
+@media all and (max-width: 800px) {
+nav a {
+padding-right: 0px;
+}
+nav :nth-child(2) {
+font-size: 2rem;
+}
+
+/* FONT TESTER page  */
+#font-controls > div div button, #font-color-custom, #font-size-custom, #background-color-custom {
+width: 35px;
+height: 35px;
+}
+/*end FONT TESTER page  */
+
+/* COMPANY PAGE */
+#company-main {
+max-width: 100%;
+max-height: 100%;
+}
+#company-main article {
+max-width: 100%;
+padding: 20px 40px;
+}
+/* end COMPANY PAGE */
+}
+
+
+
+
+
+@media all and (max-width: 700px) {
+/* FONT TESTER page  */
+#font-controls > div div {
+padding: 0 20px;
+/*end FONT TESTER page  */
+}
+}
+
+
+
+
+
+@media all and (max-width: 650px) {
+/* NAV and FONT TESTER page  */
+#font-controls > div {
+width: 20%;
+}
+nav a, #font-controls > div label {
+font-size: 0.8rem;
+}
+/*end NAV and FONT TESTER page  */
+
+/* HOME PAGE */
+#index-main {
+height: 100%;
+}
+#woof-holder {
+width: 550px;
+}
+#woof-1 {
+width: 100px;
+}
+#woof-1:before, #woof-1:after {
+border-left: 20px solid dimgray;
+border-right: 20px solid dimgray;
+width: 35px;
+height: 125px;
+}
+#woof-2 {
+width: 135px;
+height: 135px;
+border: 20px solid gray;
+}
+#woof-3 {
+animation-name: woofBottom;
+width: 90px;
+height: 90px;
+border: 40px solid dimgray;
+}
+#woof-4 {
+width: 85px;
+height: 125px;
+border-top: 20px solid #444;
+border-left: 20px solid #444;
+}
+#woof-4:after {
+top: 30px;
+border-top: 15px solid #444;
+width: 65px;
+}
+#woof-1:hover + #woof-2 {
+border: 50px solid lightgray;
+}
+#woof-2:hover + #woof-3 {
+width: 150px;
+height: 150px;
+}
+#woof-3:hover + #woof-4 {
+height: 150px;
+border-left-color: black;
+border-bottom-left-radius: 30%;
+}
+#woof-4:hover {
+width: 150px;
+height: 100px;
+}
+/* end HOME PAGE */
+}
+
+
+
+
+
+@media all and (max-width: 550px) {
+main {
+top: 30px;
+}
+/* HEADER w/:after elements content */
+nav {
+transition: all 0.25s;
+display: block !important;
+}
+nav:before, nav:after, #font-gallery > div:after {
+display: none;
+}
+nav :not(:nth-child(1)):not(:nth-child(2)) {
+display: none;
+font-size: 1rem;
+}
+nav button {
+font-size: 1.4rem;
+font-weight: bold;
+color: white;
+background: black;
+padding: 2px;
+transition: opacity 0.25s;
+margin-left: 10px;
+border-radius: 5px;
+}
+nav button:hover, nav button:focus {
+opacity: 0.5;
+}
+nav :nth-child(1) {
+display: inline-block;
+}
+nav :nth-child(2) {
+padding-left: 10px;
+}
+#nav-expanded {
+height: 350px;
+}
+#nav-expanded :not(:nth-child(1)):not(:nth-child(2)) {
+display: block;
+padding: 15px 0 15px 60px;
+}
+nav :last-child {
+border-bottom: 1px solid lightgray;
+}
+/* end HEADER w/:after elements content */
+
+/* HOME PAGE */
+#index-main a {	
+display: block;
+}
+/* end HOME PAGE */
+
+/* LIBRARY PAGE  */
+#text-box {
+font-size: 2rem;
+}
+#gallery-controls {
+padding-left: 10px;
+}
+#font-gallery > div {
+padding: 20px 10px;
+margin-bottom: 20px;
+box-shadow: none;
+}
+#font-gallery > div h3 {
+padding-left: 5px;
+}
+#font-gallery > div p {
+font-size: 2rem;
+}
+#font-gallery ul li {
+min-width: 300px;
+}
+#font-gallery > div > div ul, #font-gallery > div input[type=checkbox]:checked + ul {
+font-size: 1.6rem;
+}
+/* end LIBRARY PAGE  */
+
+/* FONT TESTER page  */
+#font-controls {
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+border-top: 1px solid lightgray;
+}
+#font-controls > div {
+padding-left: 10px;
+display: block;
+width: 100%;
+padding-bottom: 30px;
+}
+#font-controls > div label {
+font-size: 0.925rem;
+}
+#font-controls > div input[type=checkbox]:checked + div{
+display: block;
+padding-top: 20px;
+}
+#font-controls > div div button, #font-color-custom, #font-size-custom, #background-color-custom {
+width: 50px;
+height: 50px;
+}
+/* end FONT TESTER page */
+
+/* DESIGNERS page */
+#designer-main article {
+max-width: 100%;
+margin: 0;
+padding: 10%;
+}
+#designer-main article h3 {
+padding-top: 50px;
+padding-bottom: 0;
+float: right;
+border-bottom: 5px solid lightgray;
+border-left: 5px solid transparent;
+}
+#designer-main article img {
+clear: left;
+margin: 0;
+}
+#designer-main article p {
+transition: opacity 0.15s, height 0.15s 0.15s;
+}
+#designer-main input[type=radio]:checked + p {
+height: 200px;
+transition: height 0.15s, opacity 0.15s 0.15s;
+}
+/* end DESIGNERS page */
+	
+/* COMPANY PAGE */
+#company-main article figure {
+float: none;
+display: block;
+margin: 0 0 30px 0;
+}
+#company-main article figure figcaption {
+width: 100vw;
+}
+/* end COMPANY PAGE */
+}
+
+
+
+
+
+@media all and (max-width:500px) {
+/* HOME PAGE */
+#woof-holder {
+width: 320px;
+}
+/* end HOME PAGE */
+
+/* DESIGNERS page */
+#designer-main article h3 {
+max-width: 150px;
+}
+/* end DESIGNERS page */
+
+/* COMPANY PAGE */
+#company-main article {
+padding: 20px 10px;
+}
+/* end COMPANY PAGE */
+}
+
+
+
+
+
+
+@media all and (max-width:460px) {
+/* DESIGNERS page */
+#designer-main article img {
+width: 150px;
+height: 150px;
+}
+/* end DESIGNERS page */
+}
+
+
+
+
+
+@media all and (max-width: 450px) {
+/* LIBRARY page  */
+#gallery-controls {
+padding: 10px;
+width: 90%;
+}
+#gallery-controls label {
+text-align: left;
+}
+#gallery-controls label, #gallery-controls select {
+padding: 5px;
+border-right: none;
+font-size: 0.8rem;
+}
+/* end LIBRARY page  */
+
+/* CONTACT PAGE */
+form fieldset label, form fieldset input, form fieldset textarea {
+width: 100%;
+}
+/* end CONTACT PAGE */
+}
+
+
+
+
+
+@media all and (max-width: 400px) {
+/* LIBRARY PAGE */
+#gallery-controls {
+width: 100%;
+}
+#font-gallery > div > div ul, #font-gallery > div input[type=checkbox]:checked + ul {
+font-size: 1.4rem;
+}
+/* end LIBRARY page */
+/* FONT TESTER page */	
+#text-box {
+font-size: 1.4rem;
+}
+/* end FONT TESTER page */
+
+/* DESIGNERS page */
+#designer-main article {
+padding: 20px;
+}
+#designer-main article h3 {
+font-size: 1rem;
+}
+/* end DESIGNERS page */
+}
+
+
+
+
+
+@media all and (max-width: 360px) {
+/* LIBRARY PAGE */
+#gallery-controls {
+width: 80%;
+}
+#gallery-controls label, 
+#gallery-controls select, 
+#font-gallery > div > div ul, 
+#font-gallery > div input[type=checkbox]:checked + ul {
+font-size: 1rem;
+}
+#font-gallery > div {
+padding: 10px;
+margin-bottom: 20px;
+box-shadow: none;
+}
+#font-gallery > div h3 {
+padding-left: 0;
+}
+#font-gallery > div p {
+padding-left: 10px;
+font-size: 2rem;
+}
+/* end LIBRARY PAGE */	
+
+/* DESIGNERS page */
+#designer-main article {
+padding: 10px;
+}
+#designer-main article h3 {
+max-width: 120px;
+}
+/* end DESIGNERS page */
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+#back-to-portfolio {
+z-index: 9999;
+background-color: firebrick;
+width: 200px;
+height: 25px;
+border-bottom-left-radius: 10px;
+margin: 0 auto;
+position: fixed;
+top: -5px;
+right: 0;
+text-align: center;
+transition: all 0.5s ease;
+}
+
+#back-to-portfolio a {
+font-family: Century Gothic, sans-serif;
+color: white;
+}
+
+#back-to-portfolio:hover {
+height: 30px;
+top: 0;
+}
+
+@media all and (max-width: 480px) {
+#back-to-portfolio {
+width: 100vw;
+height: 20px;
+border-bottom-left-radius: 0;
+margin: 0;
+position: relative;
+top: 0;
+}
+
+#back-to-portfolio a {
+font-size: 0.8rem;
+}
+}
