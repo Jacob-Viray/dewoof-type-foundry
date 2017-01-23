@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>De Woof | Font Tester</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet"  href="../assets/css/styles-web-projects-universal.css">
+</head>
+
+<body>
+
+<div id="back-to-portfolio">
+<a href="http://www.jacobsireviray.com/projectswebdev.html">Back to Portfolio</a>
+<div id="icon-web"></div>
+</div>
+
+<header>
+<nav id="nav-expanded" class="flex-center-horiz">
+<button id="nav-toggle">&#9776;</button>
+<a href="index.html">De Woof</a>
+<a href="library.html">Library</a>
+<a href="tester.html">Font Tester</a>
+<a href="designers.html">Designers</a>
+<a href="company.html">Company</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<main class="flex-center-vert">
+
+<div id="text-box-holder"><input type="text" id="text-box" placeholder="Type your text here!" autofocus></div>
+
+<div id="font-controls" class="flex-center-horiz">
+<div>
+<label for="collapse-font-family">Family</label>
+<input type="checkbox" id="collapse-font-family">
+<div id="font-family-holder">
+<button id="font-alpha1">Ant</button>
+<button id="font-alpha2">Cat</button>
+<button id="font-alpha3">Dog</button>
+<button id="font-alpha4">Wolf</button>
+</div>
+</div>
+
+<div>
+<label for="collapse-font-size">Size</label>
+<input type="checkbox" id="collapse-font-size">
+<div id="font-size-holder">
+<button id="font-small">S</button>
+<button id="font-medium">M</button>
+<button id="font-large">L</button>
+<button id="font-xlarge">XL</button>
+<button id="font-xxlarge">XXL</button>
+<label for="font-size-custom">Custom: </label>
+<input oninput="limitCharInput(this)" type="number" id="font-size-custom">
+</div>
+</div>
+
+<div>
+<label for="collapse-font-style">Style</label>
+<input type="checkbox" id="collapse-font-style">
+<div id="font-style-holder">
+<button id="font-regular">Regular</button>
+<button id="font-italic">Italic</button>
+<button id="font-oblique">Oblique</button>
+</div>
+</div>
+
+<div>
+<label for="collapse-font-weight">Weight</label>
+<input type="checkbox" id="collapse-font-weight">
+<div id="font-weight-holder">
+<button id="font-weight-light">Light</button>
+<button id="font-weight-normal">Normal</button>
+<button id="font-weight-bold">Bold</button>
+</div>
+</div>
+
+<div>
+<label for="collapse-font-color">Color</label>
+<input type="checkbox" id="collapse-font-color">
+<div id="font-color-holder">
+<button id="font-black"></button>
+<button id="font-white"></button>
+<button id="font-red"></button>
+<button id="font-blue"></button>
+<button id="font-green"></button>
+<label for="font-color-custom">Custom: </label>
+<input id="font-color-custom" type="color">
+</div>
+</div>
+
+<div>
+<label for="collapse-background-color">Background</label>
+<input type="checkbox" id="collapse-background-color">
+<div id="background-color-holder">
+<button id="background-black"></button>
+<button id="background-white"></button>
+<button id="background-red"></button>
+<button id="background-blue"></button>
+<button id="background-green"></button>
+<label for="background-color-custom">Custom: </label>
+<input id="background-color-custom" type="color">
+</div>
+</div>
+</div>
+
+</main>
+
+<script src="assets/js/de-woof.main.js"></script>
+<script>
+var textBox=document.getElementById("text-box"); //shared var
+
+
+
+//FONT FAMILY
+var fontFamilyHolder=document.getElementById("font-family-holder");	
+
+fontFamilyHolder.addEventListener("click",function (ffc){
+if (ffc.target!==ffc.currentTarget){
+var pickedFamily=ffc.target.id;
+if (pickedFamily=="font-alpha1"){
+textBox.style.fontFamily=fontFamilyArray[0];
+}
+else if (pickedFamily=="font-alpha2"){
+textBox.style.fontFamily=fontFamilyArray[1];
+}
+else if (pickedFamily=="font-alpha3"){
+textBox.style.fontFamily=fontFamilyArray[2];
+}
+else if (pickedFamily=="font-alpha4"){
+textBox.style.fontFamily=fontFamilyArray[3];
+}
+}
+});
+//end FONT FAMILY
+	
+	
+	
+//FONT SIZE
+var fontSizeHolder=document.getElementById("font-size-holder"),
+fontSizeCustom=document.getElementById("font-size-custom");
+
+fontSizeHolder.addEventListener("click",function (fsc){
+if (fsc.target!==fsc.currentTarget){
+var pickedSize=fsc.target.id;
+if (pickedSize=="font-small"){
+textBox.style.fontSize=fontSizeArray[0];
+}
+else if (pickedSize=="font-medium"){
+textBox.style.fontSize=fontSizeArray[1];
+}
+else if (pickedSize=="font-large"){
+textBox.style.fontSize=fontSizeArray[2];
+}
+else if (pickedSize=="font-xlarge"){
+textBox.style.fontSize=fontSizeArray[3];
+}
+else if (pickedSize=="font-xxlarge"){
+textBox.style.fontSize=fontSizeArray[4];
+}
+}
+});
+
+//FONT SIZE CUSTOM
+fontSizeCustom.addEventListener("keyup",
+function (){
+document.getElementById("text-box").style.fontSize=fontSizeCustom.value+"px";
+});
+
+//FONT SIZE INPUT LIMITER
+function limitCharInput(fsc) {
+var maxCharAllowed=3,
+maxAmountAllowed=400;
+if (fsc.value.length > maxCharAllowed)
+fsc.value=fsc.value.slice(0, maxCharAllowed);
+if (fsc.value>maxAmountAllowed)
+fsc.value=maxAmountAllowed;
+}
+//end FONT SIZE
+
+
+
+//FONT STYLE
+var fontStyleHolder=document.getElementById("font-style-holder");
+
+fontStyleHolder.addEventListener("click",function (fsh){
+if (fsh.target!==fsh.currentTarget){
+var pickedStyle=fsh.target.id;
+if (pickedStyle=="font-regular"){
+textBox.style.fontStyle=fontStyleArray[0];
+}
+else if (pickedStyle=="font-italic"){
+textBox.style.fontStyle=fontStyleArray[1];
+}
+else if (pickedStyle=="font-oblique"){
+textBox.style.fontStyle=fontStyleArray[2];
+}
+}
+});
+//end FONT STYLE
+
+
+
+//FONT WEIGHT
+var fontWeightHolder=document.getElementById("font-weight-holder");
+
+fontWeightHolder.addEventListener("click",function (fwh){
+if (fwh.target!==fwh.currentTarget){
+var pickedWeight=fwh.target.id;
+if (pickedWeight=="font-weight-light"){
+textBox.style.fontWeight=fontWeightArray[0];
+}
+else if (pickedWeight=="font-weight-normal"){
+textBox.style.fontWeight=fontWeightArray[1];
+}
+else if (pickedWeight=="font-weight-bold"){
+textBox.style.fontWeight=fontWeightArray[2];
+}
+}
+});
+//end FONT WEIGHT
+	
+	
+
+//FONT COLOR
+var fontColorHolder=document.getElementById("font-color-holder"),
+fontColorCustom=document.getElementById("font-color-custom");
+
+fontColorHolder.addEventListener("click",function (fcc){
+if (fcc.target!==fcc.currentTarget){
+var pickedColor=fcc.target.id;
+if (pickedColor=="font-black"){
+textBox.style.color=fontColorArray[0];
+}
+else if (pickedColor=="font-white"){
+textBox.style.color=fontColorArray[1];
+}
+else if (pickedColor=="font-red"){
+textBox.style.color=fontColorArray[2];
+}
+else if (pickedColor=="font-blue"){
+textBox.style.color=fontColorArray[3];
+}
+else if (pickedColor=="font-green"){
+textBox.style.color=fontColorArray[4];
+}
+}
+});
+	
+//FONT COLOR CUSTOM
+fontColorCustom.addEventListener("change",
+function(){
+textBox.style.color=fontColorCustom.value;
+})
+//end FONT COLOR
+
+
+
+//BACKGROUND COLOR
+var backgroundColorHolder=document.getElementById("background-color-holder"),
+backgroundColorCustom=document.getElementById("background-color-custom");
+
+backgroundColorHolder.addEventListener("click", function (bgcc){
+if (bgcc.target!==bgcc.currentTarget){
+var pickedColor=bgcc.target.id;
+if (pickedColor=="background-black"){
+document.body.style.backgroundColor=backgroundColorArray[0];
+}
+else if (pickedColor=="background-white"){
+document.body.style.backgroundColor=backgroundColorArray[1];
+}
+else if (pickedColor=="background-red"){
+document.body.style.backgroundColor=backgroundColorArray[2];
+}
+else if (pickedColor=="background-blue"){
+document.body.style.backgroundColor=backgroundColorArray[3];
+}
+else if (pickedColor=="background-green"){
+document.body.style.backgroundColor=backgroundColorArray[4];
+}
+}
+});
+
+//BACKGROUND COLOR CUSTOM
+backgroundColorCustom.addEventListener("change",
+function(){
+document.body.style.backgroundColor=backgroundColorCustom.value;
+});
+//end BACKGROUND COLOR
+</script>
+
+</body>
+</html>

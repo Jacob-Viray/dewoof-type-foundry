@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>De Woof | Font Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet"  href="../assets/css/styles-web-projects-universal.css">
+</head>
+
+<body>
+
+<div id="back-to-portfolio">
+<a href="http://www.jacobsireviray.com/projectswebdev.html">Back to Portfolio</a>
+<div id="icon-web"></div>
+</div>
+
+<header>
+<nav id="nav-expanded" class="flex-center-horiz">
+<button id="nav-toggle">&#9776;</button>
+<a href="index.html">De Woof</a>
+<a href="library.html">Library</a>
+<a href="tester.html">Font Tester</a>
+<a href="designers.html">Designers</a>
+<a href="company.html">Company</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<main>
+
+<div id="gallery-controls">
+<label for="sort-controls">Sort By: 
+<select id="sort-controls"><option>Default</option></select></label>
+<label for="size-controls">Font Size: 
+<select id="size-controls"><option>Default</option></select></label>
+<label for="style-controls">Font Style: 
+<select id="style-controls"><option>Default</option></select></label>
+<label for="weight-controls">Font Weight: 
+<select id="weight-controls"><option>Default</option></select></label>
+</div>
+
+<div id="font-gallery">
+<div id="font-D3alphabet-1age">
+<h3>DOG DE WOOF</h3>
+<div>
+<label for="styles-popup-D3">(9 Styles from <span>$18</span>)</label>
+<input type="checkbox" id="styles-popup-D3">
+<ul>
+<li><button>&#10006;</button></li>
+<li>Dog De Woof <span>All: $130</span></li>
+<li>Normal 200 <span>$18</span></li>
+<li>Normal 400 <span>$18</span></li>
+<li>Normal 700 <span>$18</span></li>
+<li>Oblique 200 <span>$18</span></li>
+<li>Oblique 400 <span>$18</span></li>
+<li>Oblique 700 <span>$18</span></li>
+<li>Italic 200 <span>$18</span></li>
+<li>Italic 400 <span>$18</span></li>
+<li>Italic 700 <span>$18</span></li>
+</ul>
+</div>
+<p>"Justice is a kind of compact not to harm or be harmed."</p>
+</div>
+
+<div id="font-W4alphabet-2age">
+<h3>WOLF WICCAN</h3>
+<div>
+<label for="styles-popup-W4">(3 Styles from <span>$9</span>)</label>
+<input type="checkbox" id="styles-popup-W4">
+<ul>
+<li><button>&#10006;</button></li>
+<li>Wolf Wiccan <span>All: $18</span></li>
+<li>Normal 200 <span>$9</span></li>
+<li>Normal 400 <span>$9</span></li>
+<li>Normal 700 <span>$9</span></li>
+</ul>
+</div>
+<p>"Love is composed of a single soul inhabiting two bodies."</p>
+</div>
+
+<div id="font-A1alphabet-3age">
+<h3>ANT ANDORRAN</h3>
+<div>
+<label for="styles-popup-A1">(3 Styles from <span>$12</span>)</label>
+<input type="checkbox" id="styles-popup-A1">
+<ul>
+<li><button>&#10006;</button></li>
+<li>Ant Andorran <span>All: $28</span></li>
+<li>Normal 200 <span>$12</span></li>
+<li>Normal 400 <span>$12</span></li>
+<li>Normal 700 <span>$12</span></li>
+</ul>
+</div>
+<p>"Small opportunities are often the beginning of great enterprises."</p>
+</div>
+
+<div id="font-C2alphabet-4age">
+<h3>CAT CALAMITY</h3>
+<div>
+<label for="styles-popup-C2">(6 Styles from <span>$12</span>)</label>
+<input type="checkbox" id="styles-popup-C2">
+<ul>
+<li><button>&#10006;</button></li>
+<li>Cat Calamity <span>All: $130</span></li>
+<li>Normal 200 <span>$18</span></li>
+<li>Normal 400 <span>$18</span></li>
+<li>Normal 700 <span>$18</span></li>
+<li>Oblique 200 <span>$18</span></li>
+<li>Oblique 400 <span>$18</span></li>
+<li>Oblique 700 <span>$18</span></li>
+</ul>
+</div>
+<p>"Necessity is the mother of invention."</p>
+</div>
+</div>
+
+</main>
+
+<script src="assets/js/de-woof.main.js"></script>
+<script>
+//SORT LIST function
+var theGallery=document.getElementById("font-gallery"),
+theGalleryContent=theGallery.childNodes,
+sortControls=document.getElementById("sort-controls"),
+optionSortName=document.createElement("option"),
+optionSortType=document.createElement("option");
+
+//sort ALPHABETICALLY
+function sortByName(){
+var sortingArray=new Array();
+for (var tgc=0;tgc<theGalleryContent.length;tgc++){
+if (!theGalleryContent[tgc].id){
+continue;
+}
+var sortId=theGalleryContent[tgc].id.split("alphabet",1), //id keyword separator: alphabet
+sortOrder=sortId.toString().replace(/^\D+/g,"");
+sortingArray.push([sortOrder[0],theGalleryContent[tgc]]);
+}
+sortingArray.sort(function(a,b){
+return a[0]-b[0];
+});
+for (tgc=0;tgc<sortingArray.length;tgc++){
+theGallery.appendChild(sortingArray[tgc][1]);
+}
+}
+//end sort ALPHABETICALLY
+
+//sort NEWEST FIRST
+function sortByType(){
+var sortingArray=new Array();
+for (var tgc=0;tgc<theGalleryContent.length;tgc++){
+if (!theGalleryContent[tgc].id){
+continue;
+}
+var sortId=theGalleryContent[tgc].id.split("age",1), //id keyword separator: age
+sortOrder=sortId.toString().replace(/.*\D(?=\d)|\D+$/g,"");
+sortingArray.push([sortOrder[0],theGalleryContent[tgc]]);
+}
+sortingArray.sort(function(a,b){
+return b[0]-a[0];
+});
+for (var tgc=0;tgc<sortingArray.length;tgc++){
+theGallery.appendChild(sortingArray[tgc][1]);
+}
+}
+
+//append sort options
+optionSortName.textContent="Name";
+optionSortType.textContent="Newest";
+sortControls.appendChild(optionSortName);
+sortControls.appendChild(optionSortType);
+sortControls.onchange=sortFonts;
+	
+function sortFonts(){
+if(optionSortName.selected==true){
+sortByName();
+}
+if(optionSortType.selected==true){
+sortByType();
+}
+}
+//end sort NEWEST FIRST
+//end SORT LIST function
+
+	
+	
+	
+
+//SIZE CHANGE function
+//FONT SIZE
+var	sizeControls=document.getElementById("size-controls"),
+fontSample=document.querySelectorAll("#font-gallery div p"), //shared var
+optionSizeTiny=document.createElement("option"),
+optionSizeSmall=document.createElement("option"),
+optionSizeMedium=document.createElement("option"),
+optionSizeLarge=document.createElement("option"),
+optionSizeExtraLarge=document.createElement("option");
+
+//append size options
+optionSizeTiny.textContent="Small";
+optionSizeSmall.textContent="Medium";
+optionSizeMedium.textContent="Large";
+optionSizeLarge.textContent="XL";
+sizeControls.appendChild(optionSizeTiny);
+sizeControls.appendChild(optionSizeSmall);
+sizeControls.appendChild(optionSizeMedium);
+sizeControls.appendChild(optionSizeLarge);
+sizeControls.onchange=sizeFonts;
+
+function sizeFonts(){
+var sf;
+if(optionSizeTiny.selected==true){
+for (sf = 0; sf < fontSample.length; sf++) {
+fontSample[sf].style.fontSize=fontSizeArray[0];
+}
+}
+if(optionSizeSmall.selected==true){
+for (sf = 0; sf < fontSample.length; sf++) {
+fontSample[sf].style.fontSize=fontSizeArray[1];
+}
+}
+if(optionSizeMedium.selected==true){
+for (sf = 0; sf < fontSample.length; sf++) {
+fontSample[sf].style.fontSize=fontSizeArray[2];
+}
+}
+if(optionSizeLarge.selected==true){
+for (sf = 0; sf < fontSample.length; sf++) {
+fontSample[sf].style.fontSize=fontSizeArray[3];
+}
+}
+}
+//end FONT SIZE
+//end SIZE CHANGE function
+
+	
+	
+	
+	
+//STYLE CHANGE function
+var	styleControls=document.getElementById("style-controls"),
+optionStyleNormal=document.createElement("option"),
+optionStyleItalic=document.createElement("option"),
+optionStyleOblique=document.createElement("option");
+
+//append style options
+optionStyleNormal.textContent="Regular";
+optionStyleItalic.textContent="Italic";
+optionStyleOblique.textContent="Oblique";
+styleControls.appendChild(optionStyleNormal);
+styleControls.appendChild(optionStyleItalic);
+styleControls.appendChild(optionStyleOblique);
+styleControls.onchange=styleFonts;
+
+function styleFonts(){
+var stf;
+if(optionStyleNormal.selected==true){
+for (stf = 0; stf < fontSample.length; stf++) {
+fontSample[stf].style.fontStyle=fontStyleArray[0];
+}
+}
+if(optionStyleItalic.selected==true){
+for (stf = 0; stf < fontSample.length; stf++) {
+fontSample[stf].style.fontStyle=fontStyleArray[1];
+}
+}
+if(optionStyleOblique.selected==true){
+for (stf = 0; stf < fontSample.length; stf++) {
+fontSample[stf].style.fontStyle=fontStyleArray[2];
+}
+}
+}
+//end STYLE CHANGE function
+
+	
+	
+	
+	
+//WEIGHT CHANGE function
+var	weightControls=document.getElementById("weight-controls"),
+optionWeightLight=document.createElement("option"),
+optionWeightNormal=document.createElement("option"),
+optionWeightBold=document.createElement("option");
+	
+//append weight options
+optionWeightLight.textContent="Light";
+optionWeightNormal.textContent="Normal";
+optionWeightBold.textContent="Bold";
+weightControls.appendChild(optionWeightLight);
+weightControls.appendChild(optionWeightNormal);
+weightControls.appendChild(optionWeightBold);
+weightControls.onchange=weightFonts;
+
+function weightFonts(){
+var wf;
+if(optionWeightLight.selected==true){
+for (wf = 0; wf < fontSample.length; wf++) {
+fontSample[wf].style.fontWeight=fontWeightArray[0];
+}
+}
+if(optionWeightNormal.selected==true){
+for (wf = 0; wf < fontSample.length; wf++) {
+fontSample[wf].style.fontWeight=fontWeightArray[1];
+}
+}
+if(optionWeightBold.selected==true){
+for (wf = 0; wf < fontSample.length; wf++) {
+fontSample[wf].style.fontWeight=fontWeightArray[2];
+}
+}
+}
+//end WEIGHT CHANGE function
+
+	
+	
+
+
+//STYLES POPUP function
+var stylesToggles=document.querySelectorAll("input"),
+stylesTogglesClosers=document.querySelectorAll("#font-gallery ul"); //can click anywhere on popup to close
+	
+for (stc = 0; stc < stylesTogglesClosers.length; stc++) {
+stylesTogglesClosers[stc].addEventListener("click", function() {
+for (st = 0; st < stylesToggles.length; st++) {
+stylesToggles[st].checked = false;
+}
+});
+}
+//end STYLES POPUP function
+	
+</script>
+
+</body>
+</html>
+
