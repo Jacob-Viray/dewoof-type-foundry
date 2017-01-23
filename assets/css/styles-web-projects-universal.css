@@ -8,7 +8,7 @@ height: 25px;
 border-bottom-left-radius: 10px;
 margin: 0 auto;
 position: fixed;
-top: -5px;
+top: 0;
 right: 0;
 text-align: center;
 transition: all 0.5s ease;
@@ -21,7 +21,6 @@ color: white;
 
 #back-to-portfolio:hover {
 height: 30px;
-top: 0;
 }
 
 @media all and (max-width: 480px) {
