@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://allfont.net/allfont.css?fonts=colonna-mt);
+@import url('https://fonts.googleapis.com/css?family=Monoton');
 @font-face {
 font-family: Dogtype;
 src: url(../fonts/dogtype_normal_200.woff);
@@ -192,7 +192,7 @@ nav :nth-child(1) {
 display: none;
 }
 nav :nth-child(2) {
-font-family: 'Colonna MT', 'Century Gothic', Arial, sans-serif;
+font-family: 'Monoton', 'Century Gothic', Arial, sans-serif;
 font-size: 2.75rem;
 }
 /* end HEADER content */
