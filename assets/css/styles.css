@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
 @font-face {
 font-family: Dogtype;
 src: url(../fonts/dogtype_normal_200.woff);
@@ -192,7 +192,7 @@ nav :nth-child(1) {
 display: none;
 }
 nav :nth-child(2) {
-font-family: 'Monoton', 'Century Gothic', Arial, sans-serif;
+font-family: 'Fredericka the Great', 'Century Gothic', Arial, sans-serif;
 font-size: 2.75rem;
 }
 /* end HEADER content */
